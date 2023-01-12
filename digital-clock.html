@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 align="center" style=font-size:200px>
+        <span id="hours"></span>:
+        <span id="minutes"></span>:
+        <span id="seconds"></span>
+        <span id="session"></span>
+    </h1>
+
+</body>
+<script type="text/javascript">
+
+    setInterval(showClockTime, 1000);
+
+    function showClockTime() {
+        var dateVar = new Date();
+        var hVar = dateVar.getHours();
+        var mVar = dateVar.getMinutes();
+        var sVar = dateVar.getSeconds();
+        var session;
+
+        hVar = hVar < 10 ? "0" + hVar : hVar;
+        mVar = mVar < 10 ? "0" + mVar : mVar;
+        sVar = sVar < 10 ? "0" + sVar : sVar;
+        session = hVar < 13 ? "AM" : "PM"; 
+
+        document.getElementById("hours").innerHTML = hVar;
+        document.getElementById("minutes").innerHTML = mVar;
+        document.getElementById("seconds").innerHTML = sVar;
+        document.getElementById("session").innerHTML = session;
+    }
+
+</script>
+
+</html>

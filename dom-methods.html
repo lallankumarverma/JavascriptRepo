@@ -17,6 +17,8 @@
     <div class="mainClass">
         Class2 Html Example
     </div>
+    <input type="text" id="u_name"/>
+    <input type="submit" id="submit" onclick="populateField()"/>
 </body>
 <script type="text/javascript">
 var divVar = document.getElementById("mainDiv").innerHTML;
@@ -27,5 +29,11 @@ var divClass1Var = document.getElementsByClassName("mainClass")[0].innerHTML;
 console.log(divClass1Var);
 var divClass2Var = document.getElementsByClassName("mainClass")[1].innerHTML;
 console.log(divClass2Var);
+
+    function populateField(){
+        uName = document.getElementById("u_name").value;
+        document.getElementById("u_name").value = "";
+        document.getElementsByTagName("h1")[0].innerHTML = uName; //to fetch based on tags name
+    }
 </script>
 </html>
