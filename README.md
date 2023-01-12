@@ -1,1 +1,1 @@
-# JavascriptRepo
+This Repo will help to understand basic javaScript concept for learning.
