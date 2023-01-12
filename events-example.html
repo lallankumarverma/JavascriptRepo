@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="divMain">
+        <!--input type="text" id="name" value="testing TEXT" onkeydown="executeEvent()"/-->
+        <!--input type="text" id="name" value="testing TEXT" onkeyup="executeEvent()"/-->
+        <!--input type="text" id="name" value="testing TEXT" onkeypress="executeEvent()"/-->
+        
+        <!--input type="submit" id="submit" value="Submit" onclick="executeEvent()"-->
+        <!--input type="submit" id="submit" value="Submit" oncontextmenu="executeEvent()"-->
+        <!--input type="submit" id="submit" value="Submit" ondblclick="executeEvent()"-->
+        <!--input type="submit" id="submit" value="Submit" onmousedown="executeEvent()"-->
+        <!--input type="submit" id="submit" value="Submit" onmouseup="executeEvent()"-->
+        <!--input type="submit" id="submit" value="Submit" onmouseenter="executeEvent()"-->
+        <!--input type="submit" id="submit" value="Submit" onmouseleave="executeEvent()"-->
+        <!--input type="submit" id="submit" value="Submit" onmousemove="executeEvent()"-->
+        <!--input type="submit" id="submit" value="Submit" onmouseover="executeEvent()"-->
+        <!--input type="submit" id="submit" value="Submit" onmouseout="executeEvent()"-->
+        
+        <!--input type="text" id="name" value="testing TEXT" onblur="executeEvent()"/-->        
+        <!--input type="text" id="name" value="testing TEXT" onfocus="executeEvent()"/-->
+        <!--input type="text" id="name" value="testing T
+            EXT" oninput="executeEvent()"/-->
+        <input type="text" id="name" value="testing TEXT" oninput="executeEvent()"/>
+
+
+        <!--Following will be used only for form element-->
+        <!--input type="text" id="name" value="testing TEXT" onchange="executeEvent()"/-->
+        <!---->
+        <input type="submit" id="submit" value="Submit"/>
+    </div>
+
+</body>
+<script type="text/javascript">
+
+    function executeEvent() {
+        var uName = document.getElementById("name").value;
+        console.log("uName: " + uName);
+        console.log("function executed with event_name: " + event.type);
+        
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mainDiv">
+        <h1> Welcome to html world </h1>
+        <h2> My World</h2>
+    </div>
+    <div id="partDiv"> </div>
+    <div class="mainClass">
+        Class1 Html Example
+    </div>
+    <div class="mainClass">
+        Class2 Html Example
+    </div>
+</body>
+<script type="text/javascript">
+var divVar = document.getElementById("mainDiv").innerHTML;
+//alert(divVar);
+//console.log(divVar);
+//document.getElementById("partDiv").innerHTML = "<h1> Placing value </h1>";
+var divClass1Var = document.getElementsByClassName("mainClass")[0].innerHTML;
+console.log(divClass1Var);
+var divClass2Var = document.getElementsByClassName("mainClass")[1].innerHTML;
+console.log(divClass2Var);
+</script>
+</html>

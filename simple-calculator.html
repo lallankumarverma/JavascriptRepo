@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="first" step="any"></input>
+    <select id="operation">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="number" id="second" step="any"></input>
+    <br/>
+    <br/>
+    <input type="submit" id="submit" value="Submit" onclick="performCalculation()"/>
+    <br/>
+    <div id="result">
+    </div>
+</body>
+<script type="text/javascript">
+    function performCalculation(){
+        var num1 = document.getElementById("first").value;
+        var num2 = document.getElementById("second").value;
+        var opValue = document.getElementById("operation").value;
+        var resultValue;
+
+        console.clear();
+        console.log(num1);
+        console.log(num2);
+        console.log(opValue);
+
+        switch(opValue){
+            case "+":
+                resultValue = parseFloat(num1) + parseFloat(num2);
+                break;
+            case "-":
+                resultValue = parseFloat(num1) - parseFloat(num2);
+                break;
+                case "*":
+            resultValue = parseFloat(num1) * parseFloat(num2);
+                break;
+            case "/":
+                resultValue = parseFloat(num1) / parseFloat(num2);
+                break;
+            case "%":
+                resultValue = parseFloat(num1) % parseFloat(num2);
+                break;
+        }
+
+        document.getElementById("result").innerHTML = "<h1>Result: " + resultValue + "</h1>";
+    }
+</script>
+</html>

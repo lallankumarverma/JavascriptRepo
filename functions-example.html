@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name">
+    <input type="submit" id="submit" name="submit" value="Submit" onclick="greetMessage()">
+
+    <div class="divClass">       
+    </div>
+    <div class="divClass">       
+    </div>
+
+</body>
+<script type="text/javascript">
+    function greetMessage(){
+        varUserName = document.getElementById("name").value;
+        //alert("Hello "+ varUserName);
+        document.getElementsByClassName("divClass")[0].innerHTML = "Hello " + varUserName;
+        document.getElementsByClassName("divClass")[1].innerHTML = "By " + varUserName;
+    }
+</script>
+</html>
