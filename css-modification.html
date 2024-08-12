@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #main{
+            color: red;
+            font-size: 50px;
+            text-align: center;
+            padding-top: 50px;
+            transition: 2s;
+        }
+    </style>
+</head>
+<body>
+    <div id="main" onmouseover="change()" onmouseleave="unchange()">
+        CSS Style Modification
+    </div>
+    
+</body>
+<script type="text/javascript">
+    function change(){
+        var mainObj = document.getElementById("main");
+        
+        mainObj.style.color = "orange";
+        mainObj.style.fontSize = "100Px"
+        mainObj.style.fontFamily = "verdana";
+
+    }
+
+    function unchange(){
+        var mainObj = document.getElementById("main");
+        
+        mainObj.style.color = "";
+        mainObj.style.fontSize = ""
+        mainObj.style.fontFamily = "";
+
+    }
+</script>
+</html>

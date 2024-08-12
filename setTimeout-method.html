@@ -8,15 +8,24 @@
 </head>
 
 <body>
+    <input type="submit" onclick="clearTime()"/>
+    </br>
+    <span id="newValue"></span>
 
 </body>
 <script type="text/javascript">
 
-    setTimeout(writeHellomessage, 5000); // to execute function after specified time. only once
+    var timeoutVar = setTimeout(writeHellomessage, 5000); // to execute function after specified time. only once
 
     function writeHellomessage() {
 
-        document.write("</br> hello");
+        var newDate = new Date();
+        document.getElementById("newValue").innerHTML = "hello " + newDate.getTime();
+        
+    }
+
+    function clearTime(){
+        clearTimeout(timeoutVar); // to clear timeout
     }
 </script>
 

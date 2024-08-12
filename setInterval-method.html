@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-     
+    <input type="submit" onclick="clearTime()" />
+    </br>
+    <span id="newValue"></span>
+
 </body>
 <script type="text/javascript">
 
-    setInterval(writeHellomessage, 2000); // to execute function after specified time. repeatedly 
+    var timeInterval = setInterval(writeHellomessage, 2000); // to execute function after specified time. repeatedly 
 
 
-    function writeHellomessage(){
+    function writeHellomessage() {
 
-        document.write("</br> hello");
+        var newDate = new Date();
+        document.getElementById("newValue").innerHTML = "hello " + newDate.getTime();
+    }
+
+    function clearTime(){
+        clearInterval(timeInterval); // to clear setinterval time
     }
 </script>
+
 </html>
